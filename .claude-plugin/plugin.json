@@ -1,0 +1,22 @@
+{
+  "name": "goa",
+  "version": "0.1.0",
+  "description": "Connect Claude Code to your Goa account and generate short-form reels — images, voiceovers, talking-heads, motion-graphics compositions, and a timeline — using Goa's paid engines, gated by your credit balance.",
+  "author": {
+    "name": "Goa",
+    "url": "https://getgoa.io"
+  },
+  "homepage": "https://getgoa.io",
+  "repository": "https://github.com/OmriGanor/goa-mcp",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "reels",
+    "mcp",
+    "image-generation",
+    "voiceover",
+    "talking-head",
+    "motion-graphics"
+  ],
+  "category": "media"
+}

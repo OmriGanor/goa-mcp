@@ -1,0 +1,36 @@
+{
+  "name": "goa",
+  "owner": {
+    "name": "Goa",
+    "email": "hello@getgoa.io",
+    "url": "https://getgoa.io"
+  },
+  "metadata": {
+    "description": "Connect your own Claude Code to Goa — generate short-form reels (images, voice, video, timeline) with your own subscription as the orchestrator."
+  },
+  "plugins": [
+    {
+      "name": "goa",
+      "source": "./",
+      "description": "Drive Goa's video-generation backend from your own Claude Code over an authenticated remote MCP connection.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Goa",
+        "url": "https://getgoa.io"
+      },
+      "homepage": "https://getgoa.io",
+      "repository": "https://github.com/OmriGanor/goa-mcp",
+      "license": "MIT",
+      "keywords": [
+        "video",
+        "reels",
+        "mcp",
+        "image-generation",
+        "voiceover",
+        "talking-head",
+        "motion-graphics"
+      ],
+      "category": "media"
+    }
+  ]
+}

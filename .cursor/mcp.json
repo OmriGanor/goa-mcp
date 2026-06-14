@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "goa": {
+      "url": "https://api.getgoa.io/mcp/agent/",
+      "headers": {
+        "Authorization": "Bearer ${env:GOA_PAT}"
+      }
+    }
+  }
+}
