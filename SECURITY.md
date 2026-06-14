@@ -3,7 +3,7 @@
 ## What this repo is
 
 This repository is a **configuration + documentation layer** for connecting an
-MCP client to Goa's hosted remote MCP server at `https://api.getgoa.io/mcp/agent/`.
+MCP client to Goa's hosted remote MCP server at `https://app.getgoa.io/mcp/agent/`.
 It contains no server code, no secrets, and no credentials — only client wiring
 (`.mcp.json`, `.cursor/mcp.json`), the Claude Code plugin manifest, and docs. The
 tools, authentication, and spend controls all live behind the hosted endpoint.

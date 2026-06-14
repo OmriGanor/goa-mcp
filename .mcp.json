@@ -2,7 +2,7 @@
   "mcpServers": {
     "goa": {
       "type": "http",
-      "url": "https://api.getgoa.io/mcp/agent/",
+      "url": "https://app.getgoa.io/mcp/agent/",
       "headers": {
         "Authorization": "Bearer ${GOA_PAT}"
       }

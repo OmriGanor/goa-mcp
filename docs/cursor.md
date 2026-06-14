@@ -16,7 +16,7 @@ export GOA_PAT=goa_pat_xxxxxxxx…   # in your shell profile / launch env
 **One-click** — paste into your browser (opens Cursor and prefills the config):
 
 ```
-cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwczovL2FwaS5nZXRnb2EuaW8vbWNwL2FnZW50LyIsImhlYWRlcnMiOnsiQXV0aG9yaXphdGlvbiI6IkJlYXJlciAke2VudjpHT0FfUEFUfSJ9fQ==
+cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwczovL2FwcC5nZXRnb2EuaW8vbWNwL2FnZW50LyIsImhlYWRlcnMiOnsiQXV0aG9yaXphdGlvbiI6IkJlYXJlciAke2VudjpHT0FfUEFUfSJ9fQ==
 ```
 
 **Or manually** — add to `.cursor/mcp.json` (this project) or `~/.cursor/mcp.json`
@@ -26,7 +26,7 @@ cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwc
 {
   "mcpServers": {
     "goa": {
-      "url": "https://api.getgoa.io/mcp/agent/",
+      "url": "https://app.getgoa.io/mcp/agent/",
       "headers": { "Authorization": "Bearer ${env:GOA_PAT}" }
     }
   }

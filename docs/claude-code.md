@@ -21,7 +21,7 @@ export GOA_PAT=goa_pat_xxxxxxxx…   # add to your shell profile to persist
 **Or the one-liner** (no repo needed):
 
 ```bash
-claude mcp add --transport http goa https://api.getgoa.io/mcp/agent/ \
+claude mcp add --transport http goa https://app.getgoa.io/mcp/agent/ \
   --header "Authorization: Bearer $GOA_PAT"
 ```
 

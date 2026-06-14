@@ -6,7 +6,7 @@
 
 Drive [Goa](https://getgoa.io) from **your own AI agent** and generate videos — images, voiceovers, talking-heads, motion-graphics compositions. Use a timeline to edit scenes. Your agent (Claude Code, Cursor, …) is the orchestrator; Goa's paid engines do the generation, billed against your Goa credit balance.
 
-It's one authenticated **remote MCP server** — `https://api.getgoa.io/mcp/agent/`.
+It's one authenticated **remote MCP server** — `https://app.getgoa.io/mcp/agent/`.
 Connect to that endpoint. Goa's whole operating
 guide (asset / timeline / project contracts, model guidance, skills) is served
 **live** by the server, so the config you add is a thin, near-static wiring
@@ -49,7 +49,7 @@ export GOA_PAT=goa_pat_xxxxxxxx…   # add to your shell profile to persist
 /plugin install goa@goa
 
 # …or the one-liner, no repo needed:
-claude mcp add --transport http goa https://api.getgoa.io/mcp/agent/ \
+claude mcp add --transport http goa https://app.getgoa.io/mcp/agent/ \
   --header "Authorization: Bearer $GOA_PAT"
 ```
 
@@ -60,7 +60,7 @@ Full walkthrough: [`docs/claude-code.md`](docs/claude-code.md).
 One-click — paste this into your browser (it opens Cursor):
 
 ```
-cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwczovL2FwaS5nZXRnb2EuaW8vbWNwL2FnZW50LyIsImhlYWRlcnMiOnsiQXV0aG9yaXphdGlvbiI6IkJlYXJlciAke2VudjpHT0FfUEFUfSJ9fQ==
+cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwczovL2FwcC5nZXRnb2EuaW8vbWNwL2FnZW50LyIsImhlYWRlcnMiOnsiQXV0aG9yaXphdGlvbiI6IkJlYXJlciAke2VudjpHT0FfUEFUfSJ9fQ==
 ```
 
 …or add it to `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global):
@@ -69,7 +69,7 @@ cursor://anysphere.cursor-deeplink/mcp/install?name=goa&config=eyJ1cmwiOiJodHRwc
 {
   "mcpServers": {
     "goa": {
-      "url": "https://api.getgoa.io/mcp/agent/",
+      "url": "https://app.getgoa.io/mcp/agent/",
       "headers": { "Authorization": "Bearer ${env:GOA_PAT}" }
     }
   }
@@ -80,7 +80,7 @@ Full walkthrough: [`docs/cursor.md`](docs/cursor.md).
 
 ### VS Code
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=goa&inputs=%5B%7B%22id%22%3A%22goa_pat%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22Goa%20personal%20access%20token%20%28goa_pat_...%29%22%2C%22password%22%3Atrue%7D%5D&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.getgoa.io%2Fmcp%2Fagent%2F%22%2C%22headers%22%3A%7B%22Authorization%22%3A%22Bearer%20%24%7Binput%3Agoa_pat%7D%22%7D%7D)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=goa&inputs=%5B%7B%22id%22%3A%22goa_pat%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22Goa%20personal%20access%20token%20%28goa_pat_...%29%22%2C%22password%22%3Atrue%7D%5D&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapp.getgoa.io%2Fmcp%2Fagent%2F%22%2C%22headers%22%3A%7B%22Authorization%22%3A%22Bearer%20%24%7Binput%3Agoa_pat%7D%22%7D%7D)
 
 The button prompts for your token and stores it as a secret `input` (not in
 plaintext). Or add it manually to `.vscode/mcp.json` — note VS Code uses a
@@ -91,7 +91,7 @@ plaintext). Or add it manually to `.vscode/mcp.json` — note VS Code uses a
   "servers": {
     "goa": {
       "type": "http",
-      "url": "https://api.getgoa.io/mcp/agent/",
+      "url": "https://app.getgoa.io/mcp/agent/",
       "headers": { "Authorization": "Bearer ${input:goa_pat}" }
     }
   },
@@ -104,7 +104,7 @@ plaintext). Or add it manually to `.vscode/mcp.json` — note VS Code uses a
 ### Other MCP clients (Windsurf, …)
 
 Any client that lets you set a custom `Authorization` header on a remote MCP
-server works: point it at `https://api.getgoa.io/mcp/agent/` with the header
+server works: point it at `https://app.getgoa.io/mcp/agent/` with the header
 `Authorization: Bearer <your GOA_PAT>`.
 
 ## 3. Verify
