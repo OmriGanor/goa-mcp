@@ -78,5 +78,5 @@ and a **daily cap** (the lower of the global cap and your connection's).
   long-lived signed token.
 - **Per-client consent.** Each connector you add consents separately; approving
   one client never silently authorizes another.
-- **Disconnect** any time from your client's connector settings (or revoke from
-  the Goa web app). Spending stops at your credit balance / daily cap regardless.
+- **Disconnect** any time from your client's connector settings, or revoke from
+  the Goa web app — either kills the connection's access.
