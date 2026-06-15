@@ -101,6 +101,15 @@ plaintext). Or add it manually to `.vscode/mcp.json` — note VS Code uses a
 }
 ```
 
+### Claude (web & desktop) & ChatGPT
+
+These connect over **OAuth — no token needed** (skip step 1). In Claude, click
+**Customize → Add custom connector**, paste `https://app.getgoa.io/mcp/agent/`,
+name it **Goa**, then sign in with Google and approve. ChatGPT is the same once
+**Developer Mode** is on.
+
+Full walkthrough: [`docs/web-connectors.md`](docs/web-connectors.md).
+
 ### Other MCP clients (Windsurf, …)
 
 Any client that lets you set a custom `Authorization` header on a remote MCP
@@ -150,9 +159,12 @@ token to actually spend.
   **bounded spend**, not per-action consent — so keep the cap low. Note the cap
   is soft under heavy concurrency, and multiple tokens share one user-wide
   budget (they're not additive).
-- **Auth today is a bearer token (PAT).** A scoped OAuth connect flow is on the
-  roadmap; until then, set a low daily cap and store the token via your client's
-  secret/env mechanism (never in a committed file).
+- **Two ways to authenticate.** Web clients (claude.ai, ChatGPT) use **OAuth** —
+  browser sign-in + consent, opaque revocable tokens, nothing to store; see
+  [`docs/web-connectors.md`](docs/web-connectors.md). CLI clients (Claude Code,
+  Cursor) use a **bearer token (PAT)** — set a low daily cap and store it via
+  your client's secret/env mechanism (never in a committed file). Either way,
+  spend stays bounded by your credit balance + daily cap.
 
 See [`AGENTS.md`](AGENTS.md) for the agent-facing version of these rules.
 
