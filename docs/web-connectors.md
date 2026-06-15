@@ -33,16 +33,20 @@ https://app.getgoa.io/mcp/agent/
 
 ## ChatGPT
 
-> Custom MCP connectors require **Developer Mode** (Settings → Connectors →
-> Advanced → **Developer mode**). The exact menu path moves between ChatGPT
-> versions — _this section is being finalized against the live flow._
+Custom MCP connectors are gated behind **Developer Mode**:
 
-1. Enable **Developer Mode** for connectors.
-2. **Settings → Connectors → Add custom connector** (or **Create**).
-3. Paste `https://app.getgoa.io/mcp/agent/`, name it **Goa**, and connect.
-4. **Sign in with Google** and **Approve** the consent screen. ChatGPT keeps the
+1. **Settings → Connectors → Advanced** (developer settings) and turn on
+   **Developer mode** — you'll have to acknowledge a warning that custom
+   connectors can take actions on your behalf (it's worded as enabling
+   "unverified"/risky connectors). That's expected.
+2. Back in **Connectors**, add the **Goa** app with the URL
+   `https://app.getgoa.io/mcp/agent/`.
+3. **Sign in with Google** and **Approve** the consent screen. ChatGPT keeps the
    connection alive with a refresh token (`offline_access`), so you won't have
    to re-authorize every session.
+
+> Menu labels shift between ChatGPT versions — the constant is: enable developer
+> mode, accept the risk prompt, then add the connector by URL.
 
 ## Verify
 
